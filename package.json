@@ -1,0 +1,23 @@
+{
+  "name": "andrey_blog",
+  "version": "1.0.0",
+  "description": "blog for my love)",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "trean",
+  "license": "MIT",
+  "devDependencies": {
+    "connect": "^3.4.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-useref": "^3.0.7",
+    "gulp.spritesmith": "^6.2.0",
+    "imagemin-pngquant": "^4.2.2",
+    "serve-static": "^1.10.2"
+  }
+}

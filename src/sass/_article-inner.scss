@@ -1,0 +1,138 @@
+.content {
+    width: 940px;
+    margin: 0 auto;
+    .post {
+        position: relative;
+
+        padding-bottom: 30px;
+        &:after {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+
+            width: 600px;
+            height: 1px;
+            margin-bottom: 50px;
+            margin-left: -300px;
+
+            content: '';
+
+            background: $primary;
+        }
+        h1 {
+            font-size: 30px;
+            font-weight: 200;
+
+            margin-bottom: 30px;
+
+            text-align: center;
+        }
+        p,
+        div,
+        span,
+        a {
+            font-size: 100%;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.5;
+
+            margin-bottom: 24px;
+            img[align='left'] {
+                margin-right: 20px;
+            }
+            img[align='right'] {
+                margin-left: 20px;
+            }
+        }
+        a {
+            text-decoration: none;
+
+            color: darken($secondary, 20%);
+            &:hover {
+                transition: opacity 1s ease-out 0s, visibility 1s ease-out 0s, transform .6s ease-out 0s, color .3s ease 0s;
+                text-decoration: underline;
+
+                color: $primary;
+            }
+            &:visited,
+            &:active {
+                color: darken($secondary, 30%);
+            }
+        }
+        code,
+        .code {
+            font-family: 'Anonymous Pro';
+            font-size: 95%;
+            line-height: 1.5;
+
+            display: block;
+
+            margin: 0 0 18px;
+            padding: 8px 10px;
+
+            border: 1px solid lighten($secondary, 6%);
+            border-radius: 3px;
+            background: lighten($secondary, 18%);
+            & span {
+                font-size: 95%;
+                line-height: 1.5;
+            }
+        }
+    }
+    .tags {
+        margin-right: -8px;
+        padding: 30px 0 15px;
+        .tag {
+            font-size: 14px;
+            line-height: 25px;
+
+            position: relative;
+
+            display: inline-block;
+
+            height: 25px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 0 10px;
+
+            text-decoration: none;
+
+            color: darken($secondary, 10%);
+            border: 1px solid darken($secondary, 10%);
+            border-radius: 3px;
+            &:hover {
+                transition: opacity 1s ease-out 0s, visibility 1s ease-out 0s, transform .6s ease-out 0s, color .3s ease 0s;
+
+                color: $primary;
+            }
+            &:before,
+            &:after {
+                content: '';
+                /* border-radius: 18%; */
+            }
+        }
+    }
+    .soc-btns {
+        overflow: hidden;
+
+        padding-bottom: 30px;
+
+        filter: grayscale(100%);
+        .s-btn {
+            display: inline-block;
+            float: left;
+
+            margin-right: 10px;
+        }
+    }
+}
+
+// @for $i from 1 through $repeat {
+//     .tag:nth-of-type(#{length($tag-color)}n+#{$i}) {
+//         background: nth($tag-color, random(length($tag-color)));
+//         &:hover {
+//             background: darken(nth($tag-color, random(length($tag-color))), 10%);
+//             transition: background 0.6s easy 0s;
+//         }
+//     }
+// }

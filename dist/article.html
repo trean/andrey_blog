@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/project.js"></script>
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+</head>
+<body>  
+<div class="toTop"></div> 
+	<div class="wrapper">
+		<header id="header" class="js-header">
+			<a href="ajax.html" class="category fancybox.ajax">Категория</a>
+			<p class="logo">Запись 12. Парадокс кучи</p>
+			<a href="index.html" class="tomain">Главная</a>
+		</header>
+		<div class="content">
+         <article class="post">
+            <h1>Это вот заголовок статьи h1</h1>
+			<p><img align="left" alt="Куча камней" src="http://thumbs.dreamstime.com/x/%D0%BA%D1%83%D1%87%D0%B0-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B5%D0%B9-%D0%B1%D0%B5-%D0%B0%D1%8F-%D0%BF%D1%80%D0%B5-%D0%BF%D0%BE%D1%81%D1%8B-%D0%BA%D0%B0-36535252.jpg"></p>
+			<p>В стандартной постановке парадокс кучи камней формулируется следующим образом: какого количества камней, сложенных вместе, будет достаточно для того, чтобы считать эти камни кучей. В данной постановке задачи не совсем очевидно что можно считать кучей, поэтому, в данном случае, следует полагаться исключительно на человеческую интуицию. </p>
+			<p><span id="more-149"></span></p>
+			<p>Не ограничивая общности переформулируем Парадокс в термины последовательности символов.<br>
+			   Введем вместо кучи камней строку, состоящую из определенного числа символов, например, единиц. Тогда вместо понятия кучи будем оперировать сходным термином «много».</p>
+			   <p>Каждой такой строке может быть сопоставлено некоторое (не обязательно конечное) число Машин Тьюринга, генерирующих данную строку. Среди этих машин окажутся те, которые генерируют строку с помощью некоторого цикла, а также те, которые содержат по отдельному состоянию для каждого генерируемого символа. Понятно, что также существуют промежуточные варианты конфигураций ТМ. </p>
+			   <p>Рассмотрим в качестве примера генерации строки «1111111111», 3 варианта программ на некотором алгоритмическом языке(которые, конечно, могут быть переписаны в термины ТМ):</p>
+			   <p>1:</p>
+						<pre class="code prettyprint">
+print 1
+print 1
+print 1
+print 1
+print 1
+print 1
+print 1
+print 1
+print 1</pre>
+						<p>2:</p>
+						<pre class="code prettyprint">
+for i in 1..10
+print 1
+end</pre>
+						<p>3:</p>
+						 <pre class="code prettyprint">
+print 1
+print 1
+print 1
+print 1
+print 1</pre>
+
+						<pre class="code prettyprint">
+for i in 1..5
+print 1
+end</pre>
+					<p>Тогда предлагается считать, что единиц «много», если минимальной по размеру (см. <a href="http://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D0%BC%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%BB%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">Колмогоровская сложность</a>) окажется программа второго типа. Очевидно, что программа 3 типа всегда будет сложнее чем программа второго типа, поэтому третий тип мы рассматривать не будем. Такое определение «кучи» вполне соответствует интуитивному пониманию в том смысле, что с точки зрения информационной сложности становится проще описывать кучу как отдельный объект, а не как множество составляющих ее элементов. Таким образом, такая формализация позволяет считать парадокс кучи разрешенным. Если у кого-то из читателей есть предположение, согласно которому предложенное определение кучи не соответствует интуитивному, прошу поделиться им в комментариях. </p>
+				</article>
+				<div class="tags">
+					<a class="tag btn-dark btn-border-o" href="#">Категория</a>
+					<a class="tag btn-dark btn-border-o" href="#">Тэг</a>
+					<a class="tag btn-dark btn-border-o" href="#">Что-то</a>
+					<a class="tag btn-dark btn-border-o" href="#">Ссылка</a>
+					<a class="tag btn-dark btn-border-o" href="#">Категория</a>
+					<a class="tag btn-dark btn-border-o" href="#">Вот</a>
+					<a class="tag btn-dark btn-border-o" href="#">Еще</a>
+					<a class="tag btn-dark btn-border-o" href="#">Ссылка</a>
+				</div>
+				<div class="soc-btns">
+					<!-- vk -->
+					<div class="s-btn">
+						<script type="text/javascript">
+
+							<!--
+
+							document.write(VK.Share.button({
+								url: 'comprehension.ml',
+								title: 'Парадокс кучи',
+								description:'Какого количества камней, сложенных вместе, будет достаточно для того, чтобы считать эти камни кучей?',
+								image: 'http://thumbs.dreamstime.com/x/%D0%BA%D1%83%D1%87%D0%B0-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B5%D0%B9-%D0%B1%D0%B5-%D0%B0%D1%8F-%D0%BF%D1%80%D0%B5-%D0%BF%D0%BE%D1%81%D1%8B-%D0%BA%D0%B0-36535252.jpg', 
+									noparse: true
+							}));
+
+-->
+						</script>
+					</div>
+					<!-- twitter -->
+					<div class="s-btn">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-via="_trean_" data-hashtags="comprehension.ml">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</div>
+				</div>
+				<div class="commentoza">
+					<div id="disqus_thread"></div>
+					<script>
+	/**
+	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+	 */
+	/*
+	var disqus_config = function () {
+		this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	};
+	*/
+	(function() {  // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+
+		s.src = '//comprehensionml.disqus.com/embed.js';
+
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>	
+</div>
+</div>
+<footer id="footer">
+	<section class="follow-me">
+		<a href="" class="g-hub" target="_blank"></a> 
+		<a href="" class="twitter" target="_blank"></a>
+		<a href="" class="linkedin" target="_blank"></a> 
+	</section>
+	<section class="f-logo">
+		<img src="img/logo.png" alt="">
+	</section>
+	<section class="copy"><a href="about.html">Андрей Васнецов</a> &copy; 2016</section>
+</footer> 
+</div>
+<script src="http://localhost:35729/livereload.js"></script>  
+</body>
+</html>

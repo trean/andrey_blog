@@ -1,0 +1,76 @@
+footer#footer {
+    position: relative;
+
+    margin-top: 50px;
+    padding: 30px 0;
+
+    border-top: 1px solid $primary;
+    .f-logo {
+        width: 50px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .follow-me {
+        position: absolute;
+        top: 30px;
+        left: 0;
+
+        padding: 11px 0;
+        a {
+            margin-right: 20px;
+        }
+        .linkedin {
+            display: inline-block;
+            transition: all .5s easy 0s;
+
+            @include sprite($linkedin);
+            &:hover {
+                @include sprite($linkedin-h);
+            }
+        }
+        .twitter {
+            display: inline-block;
+            transition: all .5s easy 0s;
+
+            @include sprite($twitter);
+            &:hover {
+                @include sprite($twitter-h);
+            }
+        }
+        .g-hub {
+            display: inline-block;
+            transition: all .5s easy 0s;
+
+            @include sprite($gh);
+            &:hover {
+               @include sprite($gh-h);
+           }
+       }
+   }
+   .copy {
+    font-size: 14px;
+    line-height: 50px;
+
+    position: absolute;
+    top: 30px;
+    right: 0;
+
+    height: 50px;
+
+    color: darken($secondary, 20%);
+    a {
+        text-decoration: none;
+
+        color: darken($secondary, 20%);
+        &:hover {
+            transition: opacity 1s ease-out 0s, visibility 1s ease-out 0s, transform .6s ease-out 0s, color .3s ease 0s;
+            text-decoration: underline;
+
+            color: $primary;
+        }
+    }
+}
+}

@@ -1,0 +1,296 @@
+@mixin inline-block {
+    display: inline-block;
+
+    *display: inline;
+    *zoom: 1;
+}
+
+@mixin box-shadow($box-shadow) {
+    -webkit-box-shadow: $box-shadow;
+       -moz-box-shadow: $box-shadow;
+            box-shadow: $box-shadow;
+
+         -o-box-shadow: $box-shadow;
+        -ms-box-shadow: $box-shadow;
+}
+
+@mixin box-sizing($box-sizing) {
+    -webkit-box-sizing: $box-sizing;
+       -moz-box-sizing: $box-sizing;
+            box-sizing: $box-sizing;
+
+        -ms-box-sizing: $box-sizing;
+}
+
+@mixin gradient($gradient, $fallback, $pie: false) {
+    background: $fallback;
+    background: -webkit-linear-gradient($gradient);
+    background:    -moz-linear-gradient($gradient);
+    background:      -o-linear-gradient($gradient);
+    background:     -ms-linear-gradient($gradient);
+    background:         linear-gradient($gradient);
+    @if $pie == true {
+        -pie-background: linear-gradient($gradient);
+        @include pie;
+    }
+}
+@mixin simple-gradient($direction, $color1, $color1pos, $color2, $color2pos) {
+    background: $color1;
+    background: -webkit-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+    background:    -moz-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+    background:      -o-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+    background:     -ms-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+    background:         linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+
+    -pie-background: linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+    @include pie;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+        -ms-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+       -moz-transform: $transform;
+        -ms-transform: $transform;
+         -o-transform: $transform;
+            transform: $transform;
+}
+
+@mixin pie {
+    position: relative;
+
+    behavior: url(PIE.htc);
+}
+
+@mixin group {
+    &:before,
+    &:after {
+        display: table; 
+
+        content: '';
+    }
+    &:after {
+        clear: both;
+    }
+    & {
+        *zoom: 1;
+    }
+}
+@mixin icons {
+    background-image: $icons;
+    background-repeat: no-repeat;
+}
+@mixin bigicons {
+    background-image: $bigicons;
+    background-repeat: no-repeat;
+}
+@mixin twins {
+    position: absolute;
+
+    display: block;
+
+    content: '';
+}
+
+@mixin breakpoint($point) {
+    @if $point == tablet-windows {
+        @media (min-width: 1400px) {
+            @content;
+        }
+    }
+    @if $point == tablet-windowscape {
+        @media (max-width: 1180px) {
+            @content;
+        }
+    }
+    @if $point == tablet-windowscape1 {
+        @media (max-width: 1080px) {
+            @content;
+        }
+    }
+    @if $point == tablet-landscape {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $point == tablet-portrait {
+        @media (max-width: 1000px) {
+            @content;
+        }
+    }
+    @else if $point == tablet-portrait1 {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+    @else if $point == tablet-portrait2 {
+        @media (max-width: 830px) {
+            @content;
+        }
+    }
+    @else if $point == tablet-small-portrait {
+        @media (max-width: 700px) {
+            @content;
+        }
+    }
+    @else if $point == tablet-small-portrait1 {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+    @else if $point == phone-landscape {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+    @else if $point == phone-landscape1 {
+        @media (max-width: 400px) {
+            @content;
+        }
+    }
+}
+
+@mixin btn {
+    font-family: 'Roboto Light';
+    font-size: 12px;
+    line-height: 23px;
+
+    height: 23px;
+    padding: 0 16px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 6px;
+    background: #8b8b8b;
+
+    @include pie;
+    &:hover {
+        background: #eb1520;
+    }
+}
+
+@mixin table {
+    table {
+        width: 100%;
+
+        background: #f1f1f1;
+        thead {
+            tr {
+                th {
+                    font-family: 'Roboto Bold';
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 40px;
+
+                    height: 40px;
+                    padding: 0 16px;
+
+                    text-align: left;
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    color: #fff;
+                    border-radius: 12px;
+                    background: #cfcfcf;
+
+                    @include pie;
+                }
+            }
+        }
+        //padding-top: 8px;
+        tr {
+            line-height: 40px;
+
+            height: 40px;
+            &:nth-of-type(2n) {
+                background: #e8e8e8;
+            };
+            td {
+                width: auto;
+                &:nth-of-type(1n) {
+                    padding-left: 13px;
+                    label {
+                        font-family: 'Roboto Medium';
+                        font-size: 14px;
+
+                        display: inline-block;
+
+                        width: 54px;
+                        padding-right: 8px;
+                        input {
+                            width: 262px;
+                        }
+                    }
+                }
+                &:nth-of-type(2n) {
+                    label {
+                        font-family: 'Roboto Medium';
+                        font-size: 14px;
+
+                        display: inline-block;
+
+                        width: 102px;
+                        padding: 0 8px;
+
+                        text-align: right;
+                        input {
+                            width: 262px;
+                        }
+                    }
+                }
+                &:nth-of-type(3n) {
+                    padding-right: 13px;
+                    label {
+                        font-family: 'Roboto Medium';
+                        font-size: 14px;
+
+                        display: inline-block;
+
+                        width: 58px;
+                        padding: 0 8px;
+
+                        text-align: right;
+                        input {
+                            width: 125px;
+                        }
+                    }
+                }
+                &.allWidth {
+                    label {
+                        width: 284px;
+                        span {
+                            font-family: 'Roboto Medium';
+
+                            color: #555;
+                        }
+                    }
+                    input {
+                        width: 635px;
+                    }
+                }
+            }
+            &:hover {
+                td {
+                    &:nth-of-type(1n) {
+                    }
+                    &:nth-of-type(2n) {
+                        a {
+                            color: #414040;
+                            &:active {
+                                color: lighten(#414040, 10%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+header#header {
+    position: relative;
+    z-index: 999;
+
+    margin-bottom: 50px;
+    padding: 30px 0 5px;
+
+    transition: all 1s easy .5s;
+    text-align: center;
+
+    border-bottom: 1px solid $primary;
+    background: #fff;
+    &.scrolled {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        width: 1180px;
+        margin-left: -590px;
+        /* padding: 0; */
+    }
+    .logo {
+        font-family: 'SFNS';
+        font-size: 36px;
+        font-weight: 200;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: $primary;
+        outline: none;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    h1 {
+        font-family: 'SFNS';
+        font-size: 36px;
+        font-weight: 200;
+
+        width: 80%;
+        margin: 0 auto;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: $primary;
+    }
+    .category {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+
+        text-decoration: none;
+
+        color: darken($secondary, 20%);
+        &:hover {
+            transition: all .5s ease 0s;
+
+            color: $primary;
+        }
+    }
+    .tomain {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+
+        text-decoration: none;
+
+        color: darken($secondary, 20%);
+        &:hover {
+            transition: all .5s ease 0s;
+
+            color: $primary;
+        }
+    }
+}
